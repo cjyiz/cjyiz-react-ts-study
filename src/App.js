@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import DomToImg from './components/DomToImg/index'
 import HtmlToImg from './components/htmlToImg.tsx'
+import Count from './components/Count'
+import Mouse from './components/Position'
 // import domtoimage from 'dom-to-image';
 function App() {
   // const node = document.getElementById('poster')
@@ -13,8 +15,10 @@ function App() {
     <div className="App">
       {/* <div className='cjyiz' id='poster'>
       </div> */}
+      <Count />
+      <Mouse />
       这是study,这是我足以新的编辑
-      <HtmlToImg />
+      {/* <HtmlToImg /> */}
       {/* <DomToImg /> */}
     </div>
   );
