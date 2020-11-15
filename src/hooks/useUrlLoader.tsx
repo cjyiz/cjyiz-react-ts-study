@@ -11,5 +11,5 @@ const useUrlLoader = (url: string, deps: any[] = []) => {
     });
   },deps);
   return [data,loading]
-};
+};/*  */
 export default useUrlLoader
