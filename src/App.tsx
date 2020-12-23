@@ -7,6 +7,7 @@ import {CuseRef1} from './components/Study/useRef/1'
 // import HtmlToImg from './components/htmlToImg.tsx'
 // import domtoimage from 'dom-to-image';
 function App() {
+  console.log('改了控制大')
   return (
     <>
       <div>
