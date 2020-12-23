@@ -11,7 +11,8 @@ function App() {
     <>
       <div>
         <title>react Study</title>
-        <CuseRef1 />
+        <div className='cjyiz'></div>
+        {/* <CuseRef1 /> */}
         {/* <CuseCallBack/> */}
       </div>
     </>
