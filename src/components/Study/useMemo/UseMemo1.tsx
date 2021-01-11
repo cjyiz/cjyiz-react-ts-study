@@ -12,6 +12,7 @@ export const CuseMemo: FC = () => {
   const [age, setAge] = useState("半岁");
   const [count, setCount] = useState(0);
   console.log("useMemo执行外面");
+  // 也可以直接套在组件外面,指定某个props变化才会重复渲染
   const memoizedValue = useMemo(() => {
     console.log("useMemo执行");
     return countMemoValue(name, age);

@@ -1,15 +1,12 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
-import { LogoSvg } from "@/components/Study/svgUse/LogoSvg";
-// import { HtmlToImg } from "@/components/htmlToImg";
-import { CReducer } from "@/javascript/Reducer";
+import { UseRef1 } from "@/components/Study/useRef/UseRef1";
 function App() {
-  console.log("改了控制大");
   return (
     <>
       <div>
         <title>react Study</title>
-        <CReducer />
+        <UseRef1 />
       </div>
     </>
   );
