@@ -2,17 +2,14 @@ import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
 import { LogoSvg } from "@/components/Study/svgUse/LogoSvg";
 // import { HtmlToImg } from "@/components/htmlToImg";
-import { UseCallback1 } from "@/components/Study/useCallback/useCallback1";
+import { CReducer } from "@/javascript/Reducer";
 function App() {
   console.log("改了控制大");
   return (
     <>
       <div>
         <title>react Study</title>
-        <div className="cjyiz" style={{ color: "red" }}>
-          <UseCallback1 />
-          <LogoSvg />
-        </div>
+        <CReducer />
       </div>
     </>
   );

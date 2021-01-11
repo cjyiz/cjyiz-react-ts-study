@@ -7,9 +7,9 @@ const useUrlLoader = (url: string, deps: any[] = []) => {
     setLoading(true);
     axios.get(url).then((res) => {
       setData(res.data);
-      setLoading(false)
+      setLoading(false);
     });
-  },deps);
-  return [data,loading]
-};/*  */
-export default useUrlLoader
+  }, deps);
+  return [data, loading];
+};
+export default useUrlLoader;
