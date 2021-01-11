@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import * as htmlToImage from 'html-to-image';
 import './index.css'
-import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 export const HtmlToImg = () => {
 //   const toImg:any = useRef(null);
 const toImg:any=document.getElementById('canva')
