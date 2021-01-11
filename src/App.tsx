@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import "./App.css";
+import { LogoSvg } from "@/components/Study/svgUse/LogoSvg";
 // import { HtmlToImg } from "@/components/htmlToImg";
 import { UseCallback1 } from "@/components/Study/useCallback/useCallback1";
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <>
       <div>
         <title>react Study</title>
-        <div className="cjyiz">
+        <div className="cjyiz" style={{ color: "red" }}>
           <UseCallback1 />
+          <LogoSvg />
         </div>
       </div>
     </>
