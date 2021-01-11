@@ -4,7 +4,7 @@ import "./App.css";
 // import {CuseCallBack} from './components/Study/CuseCallBack'
 import {CuseRef1} from './components/Study/useRef/1'
 // import DomToImg from './components/DomToImg/index'
-// import HtmlToImg from './components/htmlToImg.tsx'
+import {HtmlToImg} from './components/htmlToImg.tsx'
 // import domtoimage from 'dom-to-image';
 function App() {
   console.log('改了控制大')
@@ -13,8 +13,7 @@ function App() {
       <div>
         <title>react Study</title>
         <div className='cjyiz'></div>
-        {/* <CuseRef1 /> */}
-        {/* <CuseCallBack/> */}
+        <HtmlToImg />
       </div>
     </>
   );
