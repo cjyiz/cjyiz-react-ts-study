@@ -20,7 +20,6 @@ export const cjdownload = (url) => {
     } else {
         iframe.onreadystatechange = function onreadystatechange() {
             if (iframe.readyState === 'complete') {
-                iframeLoad;
             }
         };
     }

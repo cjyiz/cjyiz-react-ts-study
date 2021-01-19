@@ -16,7 +16,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": true,  // 是的
     "noEmit": true,
     "jsx": "react",
     "baseUrl": "src",
