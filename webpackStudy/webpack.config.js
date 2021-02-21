@@ -6,9 +6,19 @@ module.exports = {
   // 设置开发环境
   mode: "development",
   entry: {
-    index: './src/index.js',
-    print: './src/print.js',
-    another:'./src/another-module.js'
+    // index: './src/index.js',
+    // 配置dependOn 选项，可以在多个chunk之间共享模块
+    index: {
+      import: './src/index.js',
+      dependOn: 'shared'
+    },
+    anohter: {
+      import: './src/another-module.js',
+      dependOn: 'shared'
+    },
+    // 这样子操作可以将ramda抽出来单独打包一个bundle，但是之前的模块里面还是有ramda.
+    // 使用SplitChunksPlugin将公共的依赖模块提取到已有的入口chunk中，或者提取到一个新生成的chunk
+    shared: 'ramda'
   },
   // 开发的时候定位错误，其实就是平时的控制台显示的报错
   devtool: 'inline-source-map',
@@ -17,6 +27,11 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, "dist"), //输出的文件夹，只能是绝对路径
     publicPath: '/'
+  },
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
   },
   module: {
     rules: [
