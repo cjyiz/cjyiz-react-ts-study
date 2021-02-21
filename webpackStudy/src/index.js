@@ -7,21 +7,26 @@ console.log('webpack学习')
 require('./index.css')
 
 import { print } from './print'
-import { clone } from 'ramda'
+// import { clone } from 'ramda'
 const component = () => {
-    const a = {
-        name: 'cjyiz',
-        age: "18"
-    }
-    const b = clone(a)
-    console.log('这是最后的输出', b)
-    const element = document.createElement('div')
-    const btn = document.createElement('button')
-    element.innerHTML = '你好webpack'
-    btn.innerHTML = '点击我'
-    btn.onclick = print
-    element.appendChild(btn)
-    return element
+    return import('ramda').then(({ clone }) => {
+        const a = {
+            name: 'cjyiz',
+            age: "18"
+        }
+        const b = clone(a)
+        console.log('这是最后的输出', b)
+        const element = document.createElement('div')
+        const btn = document.createElement('button')
+        element.innerHTML = '你好webpack'
+        btn.innerHTML = '点击我'
+        btn.onclick = print
+        element.appendChild(btn)
+        return element
+    }).catch(err => console.log('如果错误，那就错了', err))
 }
 
-document.body.appendChild(component())
+// document.body.appendChild(component())
+component().then((component) => {
+    document.body.appendChild(component)
+})
