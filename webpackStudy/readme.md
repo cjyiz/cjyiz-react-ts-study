@@ -50,3 +50,11 @@ webpack执行 是在nomodules/bin目录下
 ```
 
 # webpack-dev-middleware 是一个封装器，可以进行更多自定义设置
+
+
+# 代码分离
+1.入口七点：使用 entry配置手动分离代码
+2.防止重复：使用Entry dependencies 或者 splitChunksPlugin去重和分离chunk
+3.动态导入：通过模块内联函数调用来分离代码
+
+

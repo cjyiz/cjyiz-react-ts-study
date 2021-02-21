@@ -7,7 +7,8 @@ module.exports = {
   mode: "development",
   entry: {
     index: './src/index.js',
-    print: './src/print.js'
+    print: './src/print.js',
+    another:'./src/another-module.js'
   },
   // 开发的时候定位错误，其实就是平时的控制台显示的报错
   devtool: 'inline-source-map',
