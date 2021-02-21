@@ -1,0 +1,25 @@
+# 初始化一个项目
+创建一个文件夹，在该文件夹下执行命令行`npm init`
+
+# 安装webpack
+推荐本地安装,开发环境,同时还要安装一个webpack脚手架
+```
+npm install webpack webpack-cli -D
+```
+
+# 配置启动命令
+--mode 指定模式，
+## production  生产环境    混淆编译文件
+## development 开发环境  更多的输出信息
+
+# 核心概念
+1.Entry :入口
+2.Module:模块，一个模块对应一个文件，从entry开始递归寻找所有依赖
+3.chunk:代码块，一个chunk有多个模块组合，用于代码分割和合并
+4.Loader:模块砖块，把各种模块按照需求编译
+5.Plugin:插件
+6.Output:
+
+
+#  执行原理
+webpack执行 是在nomodules/bin目录下
