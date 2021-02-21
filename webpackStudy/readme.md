@@ -23,3 +23,10 @@ npm install webpack webpack-cli -D
 
 #  执行原理
 webpack执行 是在nomodules/bin目录下
+
+
+
+# 使用HtmlWebpackPligun使得每次打包都会输出index.html文件
+
+#  每次构建前清理打包输出目录文件夹
+使用'clean-webpack-plugin'插件

@@ -1,14 +1,16 @@
 // webpack内部有一个事件流，tapable??
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require("path");
 module.exports = {
   // entry: "./src/index.js", //入口,可以是相对路径
-  entry:{
-    index:'./src/index.js',
-    print:'./src/print.js'
+  entry: {
+    index: './src/index.js',
+    print: './src/print.js'
   },
   output: {
     // filename: "bundle.js", //打包后的文件名
-    filename:'[name].bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, "dist"), //输出的文件夹，只能是绝对路径
   },
   module: {
@@ -34,7 +36,14 @@ module.exports = {
       // 还有csv-loader,xml-loader等loader解析文件
     ]
   },
-  plugins: [],
+  plugins: [
+    // 会在打包的时候输出index.html文件
+    new HtmlWebpackPlugin({
+      title: '管理输出2'
+    }),
+    // 每次打包都会清空之前的打包文件夹
+    new CleanWebpackPlugin(),
+  ],
   devServer: {
     inline: false,
     contentBase: "./dist",
