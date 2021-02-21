@@ -10,11 +10,12 @@ module.exports = {
     print: './src/print.js'
   },
   // 开发的时候定位错误，其实就是平时的控制台显示的报错
-  devtool:'inline-source-map',
+  devtool: 'inline-source-map',
   output: {
     // filename: "bundle.js", //打包后的文件名
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, "dist"), //输出的文件夹，只能是绝对路径
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -48,7 +49,7 @@ module.exports = {
     new CleanWebpackPlugin(
       {
         // 这样不会每次文件变动都删除index.html
-        cleanStaleWebpackAssets:false
+        cleanStaleWebpackAssets: false
       }
     ),
   ],

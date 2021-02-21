@@ -7,7 +7,8 @@
     "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "server":"node server.js"
   },
   "author": "cjyiz",
   "license": "ISC",
