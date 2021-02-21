@@ -30,3 +30,23 @@ webpack执行 是在nomodules/bin目录下
 
 #  每次构建前清理打包输出目录文件夹
 使用'clean-webpack-plugin'插件
+
+
+# 使用source map 将编译后的代码映射回原始源代码，便于排错
+
+
+# 如果要使用webpack自动检测文件变动，就编译的话，可以配置webpack watch
+```
+    "watch": "webpack --watch"
+
+```
+但是这样的方式每次需要刷新浏览器才会看到修改后的效果。
+如果需要自动刷新浏览器，需要使用`webpack-dev-server`
+
+然后在`package.json`中配置启动命令
+```
+    "start":"webpack serve --open"
+
+```
+
+# webpack-dev-middleware 是一个封装器，可以进行更多自定义设置

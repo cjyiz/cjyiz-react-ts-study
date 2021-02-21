@@ -3,11 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require("path");
 module.exports = {
-  // entry: "./src/index.js", //入口,可以是相对路径
+  // 设置开发环境
+  mode: "development",
   entry: {
     index: './src/index.js',
     print: './src/print.js'
   },
+  // 开发的时候定位错误，其实就是平时的控制台显示的报错
+  devtool:'inline-source-map',
   output: {
     // filename: "bundle.js", //打包后的文件名
     filename: '[name].bundle.js',
@@ -39,13 +42,20 @@ module.exports = {
   plugins: [
     // 会在打包的时候输出index.html文件
     new HtmlWebpackPlugin({
-      title: '管理输出2'
+      title: 'development'
     }),
     // 每次打包都会清空之前的打包文件夹
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin(
+      {
+        // 这样不会每次文件变动都删除index.html
+        cleanStaleWebpackAssets:false
+      }
+    ),
   ],
+  // 修改文件位置,告知dev server，从什么位置找文件
   devServer: {
     inline: false,
+    // 将dist文件夹映射到默认端口 不修改的话就是8080
     contentBase: "./dist",
   }
 };
