@@ -58,4 +58,9 @@ webpack执行 是在nomodules/bin目录下
 3.动态导入：通过模块内联函数调用来分离代码
 
 
-# 
+# bundle分析
+- 1.webpack-chart:webpack stats可交互饼图
+- 2.webpack-visualizer:可视化分析你的bundle,检查哪些模块占用空间
+- 3.webpack-bundle-analyzer
+- 4.webpack bundle optimmize helper
+- 5.bundle-stats:生成一个bundle报告，并比较不同构建之间的结果
