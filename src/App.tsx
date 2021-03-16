@@ -5,7 +5,11 @@ import { Observable2 } from "@/components/Study/observable/Observable2";
 import { CuseLayout } from "@/components/Study/useLayout/Uselayout1";
 import { UseCallback1 } from "@/components/Study/useCallback/useCallback1";
 import { CjTree } from "@/components/UI/tree";
-import {CjPhoneValidate} from '@/components/UI/phoneValidate'
+import { CjPhoneValidate } from "@/components/UI/phoneValidate";
+import { CjVideoPlayer } from "@/components/UI/VideoPlay";
+import { CjEditor } from "@/components/UI/editor";
+import { Button } from "antd";
+import { Spin } from "tezign-ui";
 function App() {
   let email = "cjyiz@tezign.com";
   let password;
@@ -15,8 +19,13 @@ function App() {
   return (
     <>
       <div className="cjyiz">
+        {/* <Button type="primary">Primary</Button>
+        <Button /> */}
+        {/* <Spin /> */}
         {/* <CjTree /> */}
-        <CjPhoneValidate/>
+        {/* <CjPhoneValidate/> */}
+        <CjVideoPlayer />
+        {/* <CjEditor /> */}
         {/* <UseCallback1 /> */}
         {/* <div className="cjyiz2">
           <CuseLayout />
