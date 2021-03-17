@@ -1,0 +1,13 @@
+ .tz-video {
+   /* position: static !important;
+   left: 0 !important;
+   top: 0 !important; */
+   width: 100px !important;
+   height: 100px !important;
+   /* z-index: 100000 !important; */
+   /* width: 100% !important; */
+   border: 1px solid blue;
+ }
+ .tz-video-wrap{
+   background-color: brown;
+ }
