@@ -1,6 +1,9 @@
 import React, { FC, useState } from "react";
 import { isValidPhoneNumber } from "libphonenumber-js";
-import { InputPhone } from "tezign-ui";
+// import { InputPhone } from "tezign-ui";
+const tezignUI = require("tezign-ui");
+const { InputPhone } = tezignUI;
+// require("tezign-ui/lib/In");
 export const CjPhoneValidate: FC = () => {
   const a = isValidPhoneNumber("8 (800) 55-35-35", "RU");
   const b = isValidPhoneNumber("18013004596", "CA");
@@ -16,9 +19,9 @@ export const CjPhoneValidate: FC = () => {
           placeholder="请输入手机号"
           onPhoneChange={setPhone}
           areaCode={areaCode}
-          onPhoneBlur={()=>{}}
-          onPhoneFocus={()=>{}}
-          onAreaCodeChange={(code) => {
+          onPhoneBlur={() => {}}
+          onPhoneFocus={() => {}}
+          onAreaCodeChange={(code: React.SetStateAction<string>) => {
             console.log("code", code);
             setAreaCode(code);
           }}

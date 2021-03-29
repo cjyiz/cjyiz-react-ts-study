@@ -10,8 +10,10 @@ import { CjVideoPlayer } from "@/components/UI/VideoPlay";
 import { CjEditor } from "@/components/UI/editor";
 import { Button } from "antd";
 import { Spin } from "tezign-ui";
+import { CjText } from "./算法/test.js";
 function App() {
   let email = "cjyiz@tezign.com";
+  CjText();
   let password;
   const index = email.indexOf("@");
   password = email.slice(0, index);
@@ -24,7 +26,7 @@ function App() {
         {/* <Spin /> */}
         {/* <CjTree /> */}
         {/* <CjPhoneValidate/> */}
-        <CjVideoPlayer />
+        {/* <CjVideoPlayer /> */}
         {/* <CjEditor /> */}
         {/* <UseCallback1 /> */}
         {/* <div className="cjyiz2">

@@ -4,7 +4,7 @@ import React, { FC, useEffect, useState } from "react";
 // import 'tezign-ui/lib/video-player/style/css'
 // import "./index.css";
 const tezignUI = require("tezign-ui");
-require('tezign-ui/lib/video-player/style/css')
+require("tezign-ui/lib/video-player/style/css");
 console.log("新加载的模块", tezignUI);
 const { VideoPlayer } = tezignUI;
 const state = {
@@ -22,6 +22,7 @@ export const CjVideoPlayer: FC = () => {
   }, []);
   return (
     <div>
+      测试的视频
       {/* <video src={source} controls width='300'> </video> */}
       <VideoPlayer
         source={source}
