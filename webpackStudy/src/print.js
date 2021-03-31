@@ -1,3 +1,3 @@
 export const print = () => {
-    console.log('打印文件')
+    conssole.log('打印文件')
 }

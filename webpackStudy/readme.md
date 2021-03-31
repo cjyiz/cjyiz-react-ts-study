@@ -23,3 +23,44 @@ npm install webpack webpack-cli -D
 
 #  执行原理
 webpack执行 是在nomodules/bin目录下
+
+
+
+# 使用HtmlWebpackPligun使得每次打包都会输出index.html文件
+
+#  每次构建前清理打包输出目录文件夹
+使用'clean-webpack-plugin'插件
+
+
+# 使用source map 将编译后的代码映射回原始源代码，便于排错
+
+
+# 如果要使用webpack自动检测文件变动，就编译的话，可以配置webpack watch
+```
+    "watch": "webpack --watch"
+
+```
+但是这样的方式每次需要刷新浏览器才会看到修改后的效果。
+如果需要自动刷新浏览器，需要使用`webpack-dev-server`
+
+然后在`package.json`中配置启动命令
+```
+    "start":"webpack serve --open"
+
+```
+
+# webpack-dev-middleware 是一个封装器，可以进行更多自定义设置
+
+
+# 代码分离
+1.入口七点：使用 entry配置手动分离代码
+2.防止重复：使用Entry dependencies 或者 splitChunksPlugin去重和分离chunk
+3.动态导入：通过模块内联函数调用来分离代码
+
+
+# bundle分析
+- 1.webpack-chart:webpack stats可交互饼图
+- 2.webpack-visualizer:可视化分析你的bundle,检查哪些模块占用空间
+- 3.webpack-bundle-analyzer
+- 4.webpack bundle optimmize helper
+- 5.bundle-stats:生成一个bundle报告，并比较不同构建之间的结果

@@ -19,7 +19,7 @@ export const UseCallback1: FC = () => {
     setColor("blue");
   };
   console.log("真实的count", count);
-  testCallback1();
+  // testCallback1();
   testCallback2("yellow");
   return (
     <div>
