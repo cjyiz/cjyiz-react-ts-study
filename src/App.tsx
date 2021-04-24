@@ -12,6 +12,7 @@ import { Button, Alert } from "tezign-ui";
 import { Spin } from "tezign-ui";
 import { CjText } from "./算法/test.js";
 import { CBreadcrumb } from "@/components/UI/breadCurmb";
+import { CTreeNode } from "@/components/AntdUI/TreeNode";
 function App() {
   let email = "cjyiz@tezign.com";
   CjText();
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <div className="cjyiz">
-        <CBreadcrumb></CBreadcrumb>
+        {/* <CBreadcrumb></CBreadcrumb>
         <Button
           onClick={() => {
             console.log("这是事件1");
@@ -30,7 +31,8 @@ function App() {
         >
           点击按钮
         </Button>
-        <Spin />
+        <Spin /> */}
+        <CTreeNode />
         {/* <CjTree /> */}
         {/* <CjPhoneValidate/> */}
         {/* <CjVideoPlayer /> */}
