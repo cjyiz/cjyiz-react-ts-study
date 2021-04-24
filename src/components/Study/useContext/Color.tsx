@@ -25,6 +25,7 @@ const defaultColor = { color: "pink" };
  * 该组件包裹的所有子组件都可以通过调用ColorContext访问到value
  */
 export const Color = (props: any) => {
+  /** useState的替代方案，在state逻辑较复杂并且包含子值等场景下较为实用 */
   const [color, dispatch] = useReducer(reducer, defaultColor.color);
   return (
     <ColorContext.Provider value={{ color, dispatch }}>
