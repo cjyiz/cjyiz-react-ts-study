@@ -11,6 +11,7 @@ while (i > 0) {
 }
 export const VisualDom = () => {
   const visibleCount = 10;
+  const itemSize = 30;
   const listRef = useRef<HTMLDivElement>(null);
   //   默认600的高度，一次渲染可视10条数据
   const [listHeight, setListHeight] = useState(600);
@@ -26,12 +27,11 @@ export const VisualDom = () => {
   const onscroll = (e: any) => {
     if (listRef.current) {
       let scrollTop = listRef.current.scrollTop;
-      let startOffset = scrollTop - (scrollTop % 30);
-      setStart(Math.floor(scrollTop / 30));
+      let startOffset = scrollTop - (scrollTop % itemSize);
+      setStart(Math.floor(scrollTop / itemSize));
       const endIndex = start + visibleCount;
       setEnd(endIndex);
       setStartOffset(startOffset);
-      console.log("滚动高度2", listRef.current.scrollTop, startOffset);
     }
   };
   useLayoutEffect(() => {
