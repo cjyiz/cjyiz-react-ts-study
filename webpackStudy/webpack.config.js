@@ -4,10 +4,13 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require("path");
 module.exports = {
   // 设置开发环境
-  mode: "development",
+  mode: "production",
+  // optimization: {
+  //   usedExports: true
+  // },
   entry: {
     index: './src/index.js',
-    cc:'./src/cc.js'
+    // cc: './src/cc.js'
   },
   // 开发的时候定位错误，其实就是平时的控制台显示的报错
   devtool: 'inline-source-map',
@@ -43,19 +46,19 @@ module.exports = {
   plugins: [
     // 会在打包的时候输出index.html文件，可以配置多入口
     new HtmlWebpackPlugin({
-      template:'./src/index.html',//指定生成的html模板
+      template: './src/index.html',//指定生成的html模板
       title: 'development',
-      filename:'index.html',
-      chunks:['index'],
-      hash:true,
-      minfy:{
-        removeAttributeQuotes:true
+      filename: '[name].[hash:8].html',
+      chunks: ['index'],
+      hash: true,
+      minfy: {
+        removeAttributeQuotes: true
       }
     }),
     // 可以输出多个html文件
     new HtmlWebpackPlugin({
       title: '这是新的',
-      chunks:['cc']
+      chunks: ['cc']
     }),
     // 每次打包都会清空之前的打包文件夹
     new CleanWebpackPlugin(
@@ -70,7 +73,7 @@ module.exports = {
     inline: false,
     // 将dist文件夹映射到默认端口 不修改的话就是8080
     contentBase: "./dist",
-  // 服务器返回给浏览器的时候是否启用gzip压缩
+    // 服务器返回给浏览器的时候是否启用gzip压缩
     compress: true
   }
 };
