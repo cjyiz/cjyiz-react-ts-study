@@ -48,7 +48,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',//指定生成的html模板
       title: 'development',
-      filename: '[name].[hash:8].html',
+      filename: 'index.html',
       chunks: ['index'],
       hash: true,
       minfy: {
@@ -56,10 +56,10 @@ module.exports = {
       }
     }),
     // 可以输出多个html文件
-    new HtmlWebpackPlugin({
-      title: '这是新的',
-      chunks: ['cc']
-    }),
+    // new HtmlWebpackPlugin({
+    //   title: '这是新的',
+    //   chunks: ['cc']
+    // }),
     // 每次打包都会清空之前的打包文件夹
     new CleanWebpackPlugin(
       {
