@@ -1,6 +1,4 @@
-export const print = () => {
+export const printMe = () => {
     console.log('打印文件')
-    console.log('这是新的')
-    console.log('这是新的2')
 
 }

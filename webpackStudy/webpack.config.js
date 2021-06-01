@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require("path");
 module.exports = {
   // 设置开发环境
-  mode: "production",
+  mode: "development",
   // optimization: {
   //   usedExports: true
   // },
@@ -70,10 +70,11 @@ module.exports = {
   ],
   // 修改文件位置,告知dev server，从什么位置找文件
   devServer: {
-    inline: false,
+    hot: false,
+    // inline: false,
     // 将dist文件夹映射到默认端口 不修改的话就是8080
     contentBase: "./dist",
     // 服务器返回给浏览器的时候是否启用gzip压缩
-    compress: true
+    // compress: true
   }
 };
