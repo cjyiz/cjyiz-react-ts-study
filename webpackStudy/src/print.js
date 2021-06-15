@@ -1,3 +1,4 @@
-export const print = () => {
-    conssole.log('打印文件')
+export const printMe = () => {
+    console.log('打印文件')
+
 }

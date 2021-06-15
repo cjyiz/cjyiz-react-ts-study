@@ -64,3 +64,8 @@ webpack执行 是在nomodules/bin目录下
 - 3.webpack-bundle-analyzer
 - 4.webpack bundle optimmize helper
 - 5.bundle-stats:生成一个bundle报告，并比较不同构建之间的结果
+
+
+# sideEffects和tree shaking
+- 1.sideEffects更为有效，因为它允许跳过整个模块/文件和整个文件子树。
+- 2.usedExports依赖于terser去检测语句中的副作用,在react的高阶函数中会出问题。

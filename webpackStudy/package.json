@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "webpackStudy",
   "main": "index.ts",
+  "sideEffects": false,
   "scripts": {
     "build": "webpack --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -19,6 +20,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.2.0",
     "inline-source-map": "^0.6.2",
+    "loadsh": "0.0.4",
     "ramda": "^0.27.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.23.0",
