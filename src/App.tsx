@@ -9,8 +9,10 @@ import { CjPhoneValidate } from "@/components/UI/phoneValidate";
 import { CjVideoPlayer } from "@/components/UI/VideoPlay";
 import { CjEditor } from "@/components/UI/editor";
 import { Button } from "antd";
-import { Spin } from "tezign-ui";
+import { Spin, Input } from "tezign-ui";
 import { CjText } from "./算法/test.js";
+import { ReactHookForm } from "./reacHookForm";
+const { TextArea } = Input;
 function App() {
   let email = "cjyiz@tezign.com";
   CjText();
@@ -21,6 +23,8 @@ function App() {
   return (
     <>
       <div className="cjyiz">
+        {/* <TextArea /> */}
+        <ReactHookForm />
         {/* <Button type="primary">Primary</Button>
         <Button /> */}
         {/* <Spin /> */}
